@@ -115,8 +115,8 @@ const Menu: React.FC<NavProps> = ({
     <Wrapper>
       <StyledNav showMenu={showMenu}>
         <Logo
-          isPushed={isPushed}
-          togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
+          // isPushed={false}
+          // togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
@@ -140,10 +140,12 @@ const Menu: React.FC<NavProps> = ({
           links={links}
           priceLink={priceLink}
         /> */}
-        <Inner isPushed={isPushed} showMenu={showMenu}>
+        <Inner isPushed={false} showMenu={showMenu}>
           {children}
         </Inner>
-        <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
+        <MobileOnlyOverlay show={false} 
+        // onClick={() => setIsPushed(false)} 
+        role="presentation" />
       </BodyWrapper>
     </Wrapper>
   );
