@@ -2162,8 +2162,6 @@ var links = [
     },
 ];
 var MENU_HEIGHT = 64;
-var SIDEBAR_WIDTH_FULL = 240;
-var SIDEBAR_WIDTH_REDUCED = 56;
 
 var Icon$O = function (props) {
     var theme = useTheme();
@@ -2212,15 +2210,9 @@ var StyledNav = styled.nav(templateObject_2$c || (templateObject_2$c = __makeTem
     return theme.nav.background;
 });
 var BodyWrapper = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
-var Inner = styled.div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  ", " {\n    margin-left: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  ", " {\n    margin-left: ", ";\n  }\n"])), function (_a) {
+var Inner = styled.div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? MENU_HEIGHT + "px" : 0);
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.mediaQueries.nav;
-}, function (_a) {
-    var isPushed = _a.isPushed;
-    return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
 });
 var MobileOnlyOverlay = styled(Overlay)(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"], ["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
     var theme = _a.theme;
